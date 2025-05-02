@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+  background-color: #f4f4f4; /* Soft light gray background */
+  font-family: 'Arial', sans-serif;
+}
+
+/* General Card Styling */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section Wrappers */
+.section-card {
+  background: #ffffff;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.jumbotron {
+  text-align: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 50px;
+  border-radius: 12px;
+}
+
+.jumbotron h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+}
+
+/* Featured Products */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  text-align: center;
+}
+
+/* Categories Section */
+.category-card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Rainbow Hover Effect */
+.category-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 0, 0, 0.2),
+    rgba(255, 165, 0, 0.2),
+    rgba(255, 255, 0, 0.2),
+    rgba(0, 128, 0, 0.2),
+    rgba(0, 0, 255, 0.2),
+    rgba(75, 0, 130, 0.2),
+    rgba(238, 130, 238, 0.2)
+  );
+  transition: left 0.5s ease;
+}
+
+.category-card:hover::after {
+  left: 0;
+}
+
+/* Category Button */
+.category-card .btn {
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover .btn {
+  background: #2575fc;
+  color: #fff;
+}
+
