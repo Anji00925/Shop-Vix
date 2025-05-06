@@ -1,0 +1,114 @@
+/* Admin.css - Light Blue Themed for Manage Products */
+
+body {
+    background-color: #e8f4fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: #f0f9ff;
+    border: 1px solid #cce5ff;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.15);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .product-card h4 {
+    color: #0056b3;
+    margin-bottom: 8px;
+  }
+  
+  .product-card p {
+    margin: 6px 0;
+    color: #333;
+  }
+  
+  .product-card strong {
+    color: #007bff;
+  }
+  
+  button {
+    margin: 6px 4px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .product-card button:nth-of-type(1) {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .product-card button:nth-of-type(2) {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #aad4ff;
+    border-radius: 6px;
+    background-color: #ffffff;
+  }
+  
+  form {
+    text-align: left;
+  }
+  

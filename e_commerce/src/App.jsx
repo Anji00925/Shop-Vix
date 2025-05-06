@@ -71,23 +71,27 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import ProductList from "./components/ProductList";
-
 import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import Categories from "./pages/Categories";
 import CategoryPage from "./pages/CategoryPage";
 import Cart from "./pages/Cart";
+import ProductList from "./components/ProductList";
+
+// import AdminDashboard from "./admin/AdminDashboard";
+// import AddProduct from "./admin/AddProduct";
+// import ManageProducts from "./admin/ManageProducts";
+// import AdminRoute from "./admin/AdminRoute";
+
 import axios from "axios";
 
 function App() {
-  const [cartItems, setCartItems] = useState([]); // Manage cart state
-  const [products, setProducts] = useState([]); // Store products fetched from the backend
+  const [cartItems, setCartItems] = useState([]);
+  const [products, setProducts] = useState([]);
 
-  // Fetch products from backend when the app loads
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products") // Adjust with your backend URL
+      .get("http://localhost:5000/api/products")
       .then((response) => {
         setProducts(response.data);
       })
@@ -96,7 +100,6 @@ function App() {
       });
   }, []);
 
-  // Function to add item to cart
   const addToCart = (product) => {
     setCartItems((prevItems) => {
       const itemExists = prevItems.find((item) => item.id === product.id);
@@ -109,12 +112,10 @@ function App() {
     });
   };
 
-  // Function to remove item from cart
   const removeFromCart = (id) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
   };
 
-  // Function to update item quantity
   const updateQuantity = (id, quantity) => {
     setCartItems(
       cartItems.map((item) =>
@@ -130,22 +131,20 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/productlist" element={<ProductList />} />
-
-        <Route path="/products/:id" element={<ProductDetails />} />
-        
-        <Route
-          path="/products"
-          element={<Products products={products} addToCart={addToCart} />} // Pass products to Products
-        />
+        <Route path="/products" element={<Products products={products} addToCart={addToCart} />} />
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/category/:categoryName" element={<CategoryPage />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
+        <Route path="/productlist" element={<ProductList />} />
+
+        
+        {/* <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
+        <Route path="/admin/add" element={<AdminRoute><AddProduct /></AdminRoute>} />
+        <Route path="/admin/manage" element={<AdminRoute><ManageProducts /></AdminRoute>} /> */}
       </Routes>
     </div>
   );
 }
 
 export default App;
-
