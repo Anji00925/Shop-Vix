@@ -1,0 +1,84 @@
+/* AdminDashboard.css – Light Blue Theme */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e6f2ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .dashboard-container {
+    padding: 40px;
+    min-height: 100vh;
+    background-color: #e6f2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashboard-title {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 40px;
+  }
+  
+  .dashboard-actions {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .dashboard-action {
+    background-color: #f0f9ff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.15);
+    padding: 30px;
+    text-align: center;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #aad4ff;
+  }
+  
+  .dashboard-action:hover {
+    transform: translateY(-6px);
+    background-color: #e0f2ff;
+  }
+  
+  .dashboard-link {
+    text-decoration: none;
+    color: #0056b3;
+    display: block;
+    font-size: 18px;
+  }
+  
+  .dashboard-link h3 {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #007bff;
+  }
+  
+  .back-button {
+    margin-top: 50px;
+  }
+  
+  .back-link {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  .back-link::before {
+    content: '←';
+    margin-right: 8px;
+    font-size: 20px;
+  }
+  
